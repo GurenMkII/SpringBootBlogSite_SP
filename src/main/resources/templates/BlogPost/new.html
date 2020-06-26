@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Site</title>
+
+    <div th:replace="/fragments/styling :: head-style"></div>
+  </head>
+  <body>
+
+    <div th:replace="/fragments/styling :: nav-bar"></div>
+
+    <div class="container">
+        <div class="row justify-content-center" id="formheader">
+            <h4>Use the form below to submit a blog post</h4>
+        </div>
+        <div class="row" id="forminputs">
+            <form action="#" th:action="@{/blogposts}" th:object="${blogPost}" method="POST">
+                <div id="formdiv">
+                    <label for="blogTitle">Title:</label><br>
+                    <input type="text" size="40" name="blogTitle" th:field="*{title}" />
+                </div>
+                <div id="formdiv">
+                    <label for="blogAuthor">Author:</label><br>
+                    <input type="text" size="40" name="blogAuthor" th:field="*{author}" />
+                </div>
+                <div id="formdiv">
+                    <label for="blogEntry">Blog Entry:</label><br>
+                    <textarea id="postfield" cols="50" rows="20" type="text" name="blogEntry" th:field="*{blogEntry}" />
+                </div>
+                <div id="indexsubmitnew">
+                    <button type="submit" class="btn btn-success">Submit Your Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div th:replace="/fragments/styling :: body-links"></div>
+    <script>
+        $(".nav .nav-link").on("click", function(){
+            $(".nav").find(".active").removeClass("active");
+            $(this).addClass("active");
+        });
+    </script>
+    </body>
+</html>
+

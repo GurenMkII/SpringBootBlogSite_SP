@@ -1,0 +1,68 @@
+html {
+    background-color: rgb(59, 0, 66);
+    padding: 0.5em 1em;
+}
+body {
+    margin: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: rgb(0, 15, 63);
+    color: rgb(255, 140, 0);
+}
+
+.card {
+    background-color: rgb(34, 19, 0);
+    max-width: 500px;
+    border-radius: 0em;
+    height: 100%;
+    max-height: 600px;
+    color: rgb(34, 206, 0);
+}
+#indexheader {
+    text-align: center;
+    display: block;
+}
+#indexsubmitnew {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#cardfooterbtns {
+    text-align: center;
+   
+}
+#cardbtn {
+    width: 80px;
+}
+#cardtextseparator {
+    border-bottom: dotted 2px rgb(82, 82, 82);
+    text-align: center;
+    /* padding-top: 10px; */
+    margin-bottom: 10px;
+}
+.col-sm {
+    height: 100%;
+    padding-top: 20px;
+}
+#formdiv {
+    margin-top: 20px;
+}
+form {
+    width: 100%;
+}
+#forminputs, #formheader {
+    margin: 10px;
+}
+#resultdisplay {
+    margin: 5px;
+}
+#resultbtn {
+    width: 205px;
+}
+.navbar {
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+#navh4 {
+    color: rgb(255, 140, 0);
+}

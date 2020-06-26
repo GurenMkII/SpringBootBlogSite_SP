@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Site</title>
+
+    <div th:replace="/fragments/styling :: head-style"></div>
+  </head>
+  <body>
+
+    <div th:replace="/fragments/styling :: nav-bar"></div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <h3>Blog Post Deletion Successful</h3>
+        </div>
+        <div class="row justify-content-center">
+            <h5>Post with Id: </h5><h5 th:text="${tempId}"></h5>
+        </div>
+
+        <div class="row" id="indexsubmitnew">
+            <div class="col-sm">
+                    <a href="/"><button id="resultbtn" class="btn btn-primary">Return Home</button></a>
+                    <a href="/blogposts/new"><button id="resultbtn" class="btn btn-success">Create Another Post</button></a>
+            </div>
+        </div>
+
+		
+    </div>
+
+    <div th:replace="/fragments/styling :: body-links"></div>
+  </body>
+</html>

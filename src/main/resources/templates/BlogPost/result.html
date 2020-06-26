@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Site</title>
+
+    <div th:replace="/fragments/styling :: head-style"></div>
+  </head>
+  <body>
+
+    <div th:replace="/fragments/styling :: nav-bar"></div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <h3>Blog Post Form</h3>
+        </div>
+        <div class="row justify-content-center">
+            <h5>Thank you for your submission!</h5>
+        </div>
+		<div class="row justify-content-center" id="resultdisplay">
+                <div class="card">
+                  <div class="card-body">
+                    <div id="cardtextseparator">
+                        <p th:text="${blogPost.title}"></p>
+                    </div>
+                    <div id="cardtextseparator">
+                        <p th:text="${blogPost.author}"></p>
+                    </div>
+    
+                        <p th:text="${blogPost.blogEntry}"></p>
+    
+                  </div>
+                  <div class="card-footer">
+                    <div class="row" id="cardfooterbtns">
+                        <div class="col-md">
+                            <a href="#" th:href="@{/blogposts/{id}(id=${blogPost.id})}"><button type="button" class="btn btn-warning" id="cardbtn">EDIT</button></a>
+                            <a href="#" th:href="@{blogposts/delete/{id}(id=${blogPost.id})}"><button type="button" class="btn btn-danger" id="cardbtn">DELETE</button></a>
+                        </div>
+                    </div>                
+                  </div>
+                </div><!-- End of .card -->
+        </div>
+
+        <div class="row" id="indexsubmitnew">
+            <div class="col-sm">
+                    <a href="/"><button id="resultbtn" class="btn btn-primary">Return Home</button></a>
+                    <a href="/blogposts/new"><button id="resultbtn" class="btn btn-success">Create Another Post</button></a>
+            </div>
+        </div>
+
+		
+    </div>
+
+    <div th:replace="/fragments/styling :: body-links"></div>
+  </body>
+</html>
